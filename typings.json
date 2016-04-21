@@ -2,6 +2,8 @@
   "dependencies": {},
   "devDependencies": {},
   "ambientDependencies": {
+    "cordova": "registry:dt/cordova#0.0.0+20160316155526",
+    "cordova/plugins/toast": "file:declare/Toast.d.ts",
     "es6-shim": "registry:dt/es6-shim#0.31.2+20160317120654"
   }
 }

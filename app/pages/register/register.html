@@ -1,0 +1,27 @@
+<ion-navbar *navbar>
+  <ion-title>注册</ion-title>
+</ion-navbar>
+
+<ion-content scroll-y="false">
+  <form [ngFormModel]="registerForm" (ngSubmit)="doRegister(registerForm.value)">
+  	<ion-list>
+  	  <ion-item>
+        <ion-label>账号：</ion-label>
+
+  	    <ion-input type="text" ngControl="phone"></ion-input>
+  	  </ion-item>
+      <ion-item>
+        <ion-label>验证码：</ion-label>
+        <ion-input type="text" ngControl="code"></ion-input>
+        <button type="button" clear item-right (click)="getCode()">获取验证码</button>
+      </ion-item>
+  	  <ion-item>
+        <ion-label>密码：</ion-label>
+  	    <ion-input [type]="isPasswordSee?'text':'password'" ngControl="password"></ion-input>
+        <button type="button" clear item-right (click)="changePasswordType()"><ion-icon [name]="isPasswordSee?'eye-off':'eye'"></ion-icon></button>
+  	  </ion-item>
+  	</ion-list>
+  	<button type="submit" full secondary>注册</button>
+    <!-- [disabled]="!registerForm.valid" -->
+	</form>
+</ion-content>

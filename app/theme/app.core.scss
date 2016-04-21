@@ -8,3 +8,14 @@
 // App Shared Sass variables belong in app.variables.scss.
 
 @import "../app";
+
+//tabs
+@import "../pages/cart/cart";
+@import "../pages/category/category";
+@import "../pages/my/my";
+@import "../pages/order/order";
+
+
+// pages
+@import "../pages/login/login";
+@import "../pages/register/register";

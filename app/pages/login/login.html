@@ -1,0 +1,30 @@
+<ion-navbar *navbar>
+  <ion-title>登陆</ion-title>
+</ion-navbar>
+
+<ion-content scrollY="false">
+  <form [ngFormModel]="loginForm" (ngSubmit)="doLogin(loginForm.value)">
+  	<ion-list>
+  	  <ion-item>
+        <ion-label floating>账号：</ion-label>
+
+  	    <ion-input type="text" ngControl="phone"></ion-input>
+  	  </ion-item>
+      <ion-item>
+        <ion-label floating>密码：</ion-label>
+  	    <ion-input [type]="isPasswordSee?'text':'password'" ngControl="password"></ion-input>
+        <button type="button" clear item-right (click)="changePasswordType()"><ion-icon [name]="isPasswordSee?'eye-off':'eye'"></ion-icon></button>
+  	  </ion-item>
+  	</ion-list>
+    <ion-row>
+      <ion-col>
+        <button type="submit" full [disabled]="!loginForm.valid" danger>登录</button>
+      </ion-col>
+      <ion-col>
+        <button type="button" full [navPush]="registerPage" secondary>注册</button>
+      </ion-col>
+    </ion-row>
+	</form>
+
+
+</ion-content>

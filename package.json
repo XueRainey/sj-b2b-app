@@ -27,7 +27,8 @@
     "cordova-plugin-whitelist",
     "cordova-plugin-splashscreen",
     "cordova-plugin-statusbar",
-    "ionic-plugin-keyboard"
+    "ionic-plugin-keyboard",
+    "cordova-plugin-x-toast"
   ],
   "cordovaPlatforms": [
     "ios",
@@ -35,7 +36,8 @@
       "platform": "ios",
       "version": "",
       "locator": "ios"
-    }
+    },
+    "android"
   ],
   "name": "sj-b2b-app",
   "description": "sj-b2b-app: An Ionic project"
