@@ -1,0 +1,23 @@
+.ry-category-info{
+  height: 100%;
+}
+
+.ry-category-content{
+  width:100%;
+  overflow: hidden;
+  p{
+    margin-left:1rem;
+    color:$light-text-color;
+  }
+}
+
+.ry-category-item{
+  width:33.3333333%;
+  float:left;
+  text-align: center;
+  img{
+    // margin:1rem;
+    width:80%;
+    margin:10%;
+  }
+}

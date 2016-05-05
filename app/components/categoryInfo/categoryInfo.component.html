@@ -1,0 +1,12 @@
+<ion-scroll scrollX="false" scrollY="true" class="ry-category-info">
+  <div class="ry-category-content" *ngFor="#categoryInfo of categoryInfoDate">
+    <p>
+      {{categoryInfo.title}}
+    </p>
+    <div class="ry-category-item" *ngFor="#categoryItem of categoryInfo.child">
+      <img [src]="categoryItem.imgUrl"/>
+      <span>{{categoryItem.title}}</span>
+    </div>
+  </div>
+
+</ion-scroll>

@@ -1,0 +1,12 @@
+
+<ion-scroll scrollX="false" scrollY="true" class="ry-top-category">
+  <ion-list>
+    <button ion-item
+      *ngFor="#topCategoryName of topCategoryDate #index = index"
+      [class.active]="selectIndex==index"
+      (click)="changeCategoryInfo(index)">
+
+      {{topCategoryName}}
+    </button>
+  </ion-list>
+</ion-scroll>

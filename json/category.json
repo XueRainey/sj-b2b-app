@@ -1,0 +1,15 @@
+{
+  "code":1,
+  "codeMessage":"SUCCESS",
+  "data":[
+    {
+      "categoryName":"牛奶",
+      "child":[
+        {
+          "categoryName":"进口牛奶",
+          "imgUrl":"http://img.sanjiang.com/goods/20090605180427750_b.jpg"
+        }
+      ]
+    }
+  ]
+}

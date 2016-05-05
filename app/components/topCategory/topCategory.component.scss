@@ -1,0 +1,24 @@
+.ry-top-category {
+  height: 100%;
+  // float: left;
+  button:first-child {
+    border-top: 0;
+  }
+  ion-list {
+    margin: 0;
+  }
+  .item.active{
+    background:white;
+    border-right:0px;
+  }
+
+  button {
+    border-right: 1px #dedede solid;
+    padding-left: 0;
+    text-align: center;
+    * {
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
