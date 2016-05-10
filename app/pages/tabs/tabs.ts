@@ -1,18 +1,44 @@
-import {Page} from 'ionic-angular';
+import {Page,Events} from 'ionic-angular';
+
+//import pages
 import {OrderPage} from '../order/order';
 import {CartPage} from '../cart/cart';
 import {CategoryPage} from '../category/category';
 import {MyPage} from '../my/my';
+import {NoLoggedInPage} from '../noLoggedIn/noLoggedIn';
 
 
 @Page({
   templateUrl: 'build/pages/tabs/tabs.html'
 })
 export class TabsPage {
-  // this tells the tabs component which Pages
-  // should be each tab's root Page
-  myRoot: any = MyPage;
-  orderRoot: any = OrderPage;
-  cartRoot: any = CartPage;
-  categoryRoot: any = CategoryPage;
+
+  private myRoot: any = NoLoggedInPage;
+  private orderRoot: any = NoLoggedInPage;
+  private cartRoot: any = NoLoggedInPage;
+
+  private categoryRoot: any = CategoryPage;
+
+  constructor(private _events:Events){
+    this.checkUserLogin(false);
+    this._events.subscribe('user:login',()=>{
+      this.checkUserLogin(true);
+    });
+  }
+
+  checkUserLogin(isLogin){
+    // let isLogin = false;
+    if(isLogin){
+      console.info("tabs:","userLogin0");
+      this.myRoot = MyPage;
+      console.info("tabs:","userLogin1");
+      this.orderRoot = OrderPage;
+      console.info("tabs:","userLogin2");
+      this.cartRoot = CartPage;
+      console.info("tabs:","userLogin3");
+
+    }
+  }
+
+
 }

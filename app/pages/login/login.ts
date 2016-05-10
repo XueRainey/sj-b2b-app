@@ -1,4 +1,4 @@
-import {Page} from 'ionic-angular';
+import {Page,Events,NavController} from 'ionic-angular';
 import {
   CORE_DIRECTIVES,
 	FORM_DIRECTIVES,
@@ -19,7 +19,7 @@ export class LoginPage {
   registerPage:any = RegisterPage;
   loginForm:any;
   isPasswordSee:boolean = false;
-  constructor(fb: FormBuilder) {
+  constructor(private _nav:NavController,private fb: FormBuilder,private _events:Events) {
     this.loginForm = fb.group({
       phone: ["", Validators.required],
       password: ["", Validators.required]
@@ -28,6 +28,8 @@ export class LoginPage {
 
   doLogin(value){
     console.log(value);
+    this._events.publish('user:login');
+    setTimeout(() => this._nav.pop(), 0);
   }
 
   changePasswordType(){
