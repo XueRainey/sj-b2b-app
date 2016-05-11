@@ -6,19 +6,21 @@
 </ion-navbar>
 
 <ion-content>
-  <!-- <ion-card> -->
-    <!-- <ion-checkbox dark checked="true"></ion-checkbox> -->
-    <ry-product-item>
-    </ry-product-item>
-  <!-- <ion-card-content>
-    <ion-card-title>
-      Nine Inch Nails Live
-      </ion-card-title>
-    <p>
-      The most popular industrial group ever, and largely
-      responsible for bringing the music to a mass audience.
-    </p>
-  </ion-card-content> -->
-<!-- </ion-card> -->
-  <ry-number-input [itemNumber]="2"></ry-number-input>
+  <ion-item class="cart-item">
+    <ion-checkbox dark checked="true"></ion-checkbox>
+    <ion-avatar item-left>
+      <img src="http://img.sanjiang.com/goods/c5/g36/122268/c8fdbdadb9baceef5350313232323638.m.0.jpg">
+    </ion-avatar>
+    <ion-label>
+      <span>可口可乐一大箱子</span>
+      <p>￥17.56</p>
+      <ry-number-input [item]="item" (changeNumber)="changeNumber($event)" (deleteItem)="deleteItem($event)"></ry-number-input>
+    </ion-label>
+  </ion-item>
+
+
 </ion-content>
+<ion-toolbar position="bottom" class="cart-toolbar">
+  <p>合计：<strong>￥13.33</strong>(不含运费)</p>
+  <button full>去结算</button>
+</ion-toolbar>

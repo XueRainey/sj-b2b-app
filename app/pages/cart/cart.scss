@@ -1,0 +1,46 @@
+.cart-item{
+  border-bottom:1px solid #dedede;
+  .item-inner{
+    border-bottom:0px;
+  }
+  ion-label{
+    p{
+      color:red;
+
+    }
+    span{
+
+    }
+  }
+  ry-number-input{
+
+  }
+  .ion-checkbox{
+      margin-right: 20px;
+  }
+  ion-avatar{
+    border:1px solid #dedede;
+    border-radius:5px;
+  }
+}
+
+.cart-toolbar{
+  padding:0px;
+  height:5.6rem;
+  p{
+    display: inline-block;
+    height:100%;
+    width:60%;
+    margin-left:1rem;
+    // float: left;
+  }
+  button{
+    display: inline-block;
+    margin:0;
+    width:30%;
+    float:right;
+  }
+  strong{
+    color:red;
+  }
+}

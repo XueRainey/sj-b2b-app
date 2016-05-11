@@ -1,11 +1,11 @@
 <div class="ry-number-input">
-  <button secondary small  outline (click)="changeNumber(itemNumber-1)">
+  <button secondary small  outline (click)="changeItemNumber(item.number-1)">
     <ion-icon name="remove"></ion-icon>
   </button>
   <button secondary small outline (click)="showChangeAlert()">
-    {{itemNumber}}
+    {{item.number}}
   </button>
-  <button secondary small outline  (click)="changeNumber(itemNumber+1)">
+  <button secondary small outline  (click)="changeItemNumber(item.number+1)">
     <ion-icon name="add"></ion-icon>
   </button>
 </div>

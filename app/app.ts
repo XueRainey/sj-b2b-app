@@ -16,8 +16,8 @@ import {CartPage} from './pages/cart/cart';
   config: {}
 })
 export class MyApp {
-  // rootPage: any = TabsPage;
-  rootPage: any = CartPage;
+  rootPage: any = TabsPage;
+  // rootPage: any = CartPage;
 
   constructor(platform: Platform) {
     platform.ready().then(() => {

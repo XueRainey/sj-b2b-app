@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from 'angular2/core';
+import {Component, Input, Output,EventEmitter} from 'angular2/core';
 import {IONIC_DIRECTIVES,Events,Alert,NavController} from 'ionic-angular';
 
 @Component({
@@ -8,15 +8,19 @@ import {IONIC_DIRECTIVES,Events,Alert,NavController} from 'ionic-angular';
 })
 
 export class NumberInputComponent{
-  @Input()
-  public itemNumber:number;
+  @Input() public item:any;
+  @Output() changeNumber = new EventEmitter();
+  @Output() deleteItem = new EventEmitter();
+
+
 
   constructor(private _events:Events,private _nav:NavController) { }
 
 
-  changeNumber(currentNumber){
+  changeItemNumber(currentNumber){
     if(currentNumber>0){
-      this.itemNumber=currentNumber;
+      this.item.number=currentNumber;
+      this.changeNumber.emit(this.item);
     }else{
       let confirmAlert = Alert.create({
         title: '是否要删除该商品？',
@@ -25,14 +29,13 @@ export class NumberInputComponent{
           {
             text: '确定',
             handler: () => {
+              this.deleteItem.emit(this.item)
               console.log('触发删除商品事件');
             }
           },
           {
             text: '取消',
-            handler: () => {
-              console.log('Agree clicked');
-            }
+            role:'cancle'
           }
         ]
       });
@@ -48,18 +51,19 @@ export class NumberInputComponent{
           name: 'currentNumber',
           label: '商品数量：',
           type: 'number',
-          value: this.itemNumber.toString()
+          value: this.item.number.toString()
         }
       ],
       buttons: [
         {
           text: '确定',
           handler: (data) => {
-            this.changeNumber(data.currentNumber);
+            this.changeItemNumber(Number(data.currentNumber));
           }
         },
         {
-          text: '取消'
+          text: '取消',
+          role:'cancle'
         }
       ]
     });
