@@ -1,5 +1,5 @@
 import {Page} from 'ionic-angular';
-import {TopCategoryComponent} from '../../components/topCategory/topCategory.componets';
+import {TopCategoryComponent} from '../../components/topCategory/topCategory.components';
 import {CategoryInfo} from '../../components/categoryInfo/categoryInfo.component';
 
 @Page({

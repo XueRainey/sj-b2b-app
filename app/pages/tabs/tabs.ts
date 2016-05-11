@@ -20,7 +20,7 @@ export class TabsPage {
   private categoryRoot: any = CategoryPage;
 
   constructor(private _events:Events){
-    this.checkUserLogin(false);
+    this.checkUserLogin(true);
 
     this._events.subscribe('user:login',()=>{
       this.checkUserLogin(true);
