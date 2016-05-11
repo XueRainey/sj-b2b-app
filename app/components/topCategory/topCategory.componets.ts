@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from 'angular2/core';
-import {IONIC_DIRECTIVES} from 'ionic-angular';
+import {IONIC_DIRECTIVES,Events} from 'ionic-angular';
 
 @Component({
   selector: 'ry-top-category',
@@ -13,11 +13,12 @@ export class TopCategoryComponent{
 
   private selectIndex=0;
 
-  constructor() { }
+  constructor(private _events:Events) { }
 
   changeCategoryInfo(index){
     this.selectIndex = index;
-    console.log("sss",index);
+    this._events.publish('topCategory:change',index);
+    // console.log("sss",index);
   }
 
   ngOnInit() {

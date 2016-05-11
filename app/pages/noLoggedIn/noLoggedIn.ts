@@ -1,4 +1,4 @@
-import {Page} from 'ionic-angular';
+import {Page,Events} from 'ionic-angular';
 
 //import pages
 import {LoginPage} from '../login/login';
@@ -9,7 +9,7 @@ import {LoginPage} from '../login/login';
 export class NoLoggedInPage {
   loginPage:any = LoginPage;
 
-  constructor() {
+  constructor(private _events:Events) {
 
   }
 }

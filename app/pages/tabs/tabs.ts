@@ -21,6 +21,7 @@ export class TabsPage {
 
   constructor(private _events:Events){
     this.checkUserLogin(false);
+
     this._events.subscribe('user:login',()=>{
       this.checkUserLogin(true);
     });

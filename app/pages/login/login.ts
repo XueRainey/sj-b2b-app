@@ -28,8 +28,8 @@ export class LoginPage {
 
   doLogin(value){
     console.log(value);
+    this._nav.pop();
     this._events.publish('user:login');
-    setTimeout(() => this._nav.pop(), 0);
   }
 
   changePasswordType(){
