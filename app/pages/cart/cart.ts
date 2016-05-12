@@ -4,7 +4,6 @@ import {Page} from 'ionic-angular';
 import {LoginPage} from '../login/login';
 
 //import components
-// import {ProductItemComponent} from '../../components/productItem/productItem.components';
 import {NumberInputComponent} from '../../components/numberInput/numberInput.component';
 
 @Page({

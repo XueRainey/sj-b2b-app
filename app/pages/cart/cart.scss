@@ -6,31 +6,41 @@
   ion-label{
     p{
       color:red;
-
+      display: inline-block;
+      line-height:4rem;
     }
     span{
-
+      display:flex;
     }
   }
-  ry-number-input{
-
+  .ry-number-input{
+    float:right;
+    margin-top:1rem;
   }
-  .ion-checkbox{
+  ion-checkbox{
       margin-right: 20px;
   }
   ion-avatar{
     border:1px solid #dedede;
     border-radius:5px;
+    img{
+      max-width:6rem;
+      max-height:6rem;
+    }
   }
 }
 
 .cart-toolbar{
   padding:0px;
   height:5.6rem;
+  .toolbar-content{
+    height:100%;
+  }
   p{
     display: inline-block;
-    height:100%;
     width:60%;
+    margin: 0;
+    margin-top: 1.7rem;
     margin-left:1rem;
     // float: left;
   }
@@ -38,6 +48,7 @@
     display: inline-block;
     margin:0;
     width:30%;
+    height:100%;
     float:right;
   }
   strong{

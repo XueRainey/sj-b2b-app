@@ -3,7 +3,7 @@
     border:1px solid;
   }
   button{
-    margin:0;
+    margin:.1rem;
     border-radius:0;
     padding: 0;
     // height: 2em;
@@ -14,12 +14,12 @@
 
   }
   button:nth-child(2){
-    margin-left:-.4rem;
+    margin-left:-.5rem;
     border-left:0;
     border-right:0;
     width:3rem;
   }
   button:nth-child(3){
-    margin-left:-.4rem;
+    margin-left:-.5rem;
   }
 }
