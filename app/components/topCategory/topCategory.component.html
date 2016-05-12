@@ -1,7 +1,7 @@
 
 <ion-scroll scrollX="false" scrollY="true" class="ry-top-category">
   <ion-list>
-    <button ion-item
+    <button ion-item detail-none
       *ngFor="#topCategoryName of topCategoryDate #index = index"
       [class.active]="selectIndex==index"
       (click)="changeCategoryInfo(index)">

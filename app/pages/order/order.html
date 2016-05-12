@@ -3,5 +3,28 @@
 </ion-navbar>
 
 <ion-content>
-<button [navPush]="loginPage">登陆</button>
+  <ion-card class="order-item">
+    <ion-card-header>
+        2016-2-3
+      <span>
+        已取消
+      </span>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-avatar item-left>
+        <img src="http://img.sanjiang.com/goods/c5/g36/122268/c8fdbdadb9baceef5350313232323638.m.0.jpg">
+      </ion-avatar>
+      <ion-avatar item-left>
+        <img src="http://img.sanjiang.com/goods/c5/g36/122268/c8fdbdadb9baceef5350313232323638.m.0.jpg">
+      </ion-avatar>
+      <ion-avatar item-left>
+        <img src="http://img.sanjiang.com/goods/c5/g36/122268/c8fdbdadb9baceef5350313232323638.m.0.jpg">
+      </ion-avatar>
+    </ion-card-content>
+    <div class="order-item-footer">
+      订单付款：￥12.12
+      <button small secondary outline>取消订单</button>
+      <button small secondary outline>再次购买</button>
+    </div>
+  </ion-card>
 </ion-content>

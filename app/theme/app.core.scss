@@ -24,3 +24,15 @@
 @import "../components/topCategory/topCategory.component";
 @import "../components/categoryInfo/categoryInfo.component";
 @import "../components/numberInput/numberInput.component";
+
+
+
+//给ion-avatar增加边框，改变大小。
+ion-avatar{
+  border:1px solid #dedede;
+  border-radius:5px;
+  img{
+    max-width:6rem;
+    max-height:6rem;
+  }
+}
